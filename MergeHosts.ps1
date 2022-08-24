@@ -83,7 +83,7 @@ foreach ($currentDomain in $script:RemoveDomains ) {
 function Generate-Text-Info
 {
   $Date = Get-Date
-  $TextInfo = (-join ("# Simple hosts merge script by AQtun`n# https://github.com/AQtun81/aqtun81.github.io/blob/master/ps/hosts`n# Generated: ", $Date, "`n# Used Sources:"))
+  $TextInfo = (-join ("# Simple hosts merge script by AQtun`n# https://github.com/AQtun81/HostsFileMerge`n# Generated: ", $Date, "`n# Used Sources:"))
 
   for ($i = 0; $i -lt $script:Sources.Count; $i++) {
     $TextInfo += (-join ("`n# ", $script:Sources[$i]))
