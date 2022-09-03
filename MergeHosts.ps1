@@ -42,7 +42,7 @@ if (-not (Test-Path ".\TMP-HOSTS\")) {
 function Donwload-And-Filter-Hosts([string]$URL, [string]$FileName)
 {
   Write-Host (-join ("Downloading Hosts File (", $FileName, ")"))
-  Invoke-WebRequest -Uri $URL -OutFile (-join (".\TMP-HOSTS\", $FileName, "-hosts.txt"))
+  Invoke-WebRequest -UseBasicParsing -Uri $URL -OutFile (-join (".\TMP-HOSTS\", $FileName, "-hosts.txt"))
 
   Write-Host (-join ("Formatting Hosts File (", $FileName, ")"))
   (Get-Content (-join (".\TMP-HOSTS\", $FileName, "-hosts.txt")))  -Replace '[" "\t]*#.*', '' -Replace '.* ', '' | Where-Object { $_ -notmatch "^#" -and $_.trim() -ne "" } | Set-Content (-join (".\TMP-HOSTS\", $FileName, "-hosts-filtered.txt"))
