@@ -10,6 +10,7 @@ By default 3 sources are used:<br/>
 | [adaway.org](https://adaway.org/)                                     | [link](https://adaway.org/hosts.txt)                                                                  |
 | [github.com/StevenBlack/hosts](https://github.com/StevenBlack/hosts)  | [link](https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts)                              |
 | [winhelp2002.mvps.org](https://winhelp2002.mvps.org/)                 | [link](https://winhelp2002.mvps.org/hosts.txt)                                                        |
+<br/>
 Other sources that can be selected:<br/>
 | source                                                                | direct link                                                                                           |
 |-----------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
@@ -20,6 +21,7 @@ Other sources that can be selected:<br/>
 | [hostsfile.org](https://www.hostsfile.org)                            | [link](https://www.hostsfile.org/Downloads/hosts.txt)                                                 |
 | [lewisje.github.io](http://lewisje.github.io)                         | [link](https://raw.githubusercontent.com/lewisje/jansal/master/adblock/hosts)                         |
 | [github.com/yous/YousList](https://github.com/yous/YousList)          | [link](https://raw.githubusercontent.com/yous/YousList/master/hosts.txt)                              |
+<br/>
 
 ## View source code
 
