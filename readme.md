@@ -25,6 +25,24 @@ Other sources that can be selected:<br/>
 | [lewisje.github.io](http://lewisje.github.io)                         | [link](https://raw.githubusercontent.com/lewisje/jansal/master/adblock/hosts)                         |
 | [github.com/yous/YousList](https://github.com/yous/YousList)          | [link](https://raw.githubusercontent.com/yous/YousList/master/hosts.txt)                              |
 
+## Usage
+
+### GUI mode
+
+"Replace Hosts file on this machine" requires administrator privilages,<br/>
+the script will ask for permissions before installing.
+
+### CLI mode
+
+| argument                | type                    |
+| ----------------------- | ----------------------- |
+| `Install`               | bool                    |
+| `Sources`               | string array            |
+| `IPFormat`              | string                  |
+| `Aliases`               | integer                 |
+
+"Copy Command" button will create command with arguments matching selection in window.
+
 ## View source code
 
 [View Source](https://github.com/AQtun81/HostsFileMerge/blob/main/MergeHosts.ps1)
