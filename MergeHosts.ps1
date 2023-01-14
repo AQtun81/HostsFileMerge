@@ -175,7 +175,7 @@ if ($Sources.Count -eq 0) {
   $Form.Controls.Add($OkButton)
 
   # --- COPY COMMAND BUTTON
-  $CopyCommand = {Set-Clipboard (-join ("powershell -executionpolicy remotesigned -Command `"& ([scriptblock]::Create((irm http://localhost/MergeHostsGUI.ps1)))", (get-arguments-from-interface), "`""))}
+  $CopyCommand = {Set-Clipboard (-join ("powershell -executionpolicy remotesigned -Command `"& ([scriptblock]::Create((irm https://raw.githubusercontent.com/AQtun81/HostsFileMerge/main/MergeHosts.ps1)))", (get-arguments-from-interface), "`""))}
   $CopyCommandButton = New-Object System.Windows.Forms.Button
   $CopyCommandButton.Text = 'Copy Command'
   $CopyCommandButton.Location = New-Object System.Drawing.Point(10, 465)
@@ -249,13 +249,13 @@ if (-Not (Is-Administrator) -And $Install) {
   # RELAUNCH SCRIPT WITH ADMINISTRATOR PRIVILAGES
   $ArgumentList = ""
   if ($Sources.Count -eq 0) { # USING GUI
-    $ArgumentList = (-join ("-executionpolicy remotesigned -Command `"& ([scriptblock]::Create((irm http://localhost/MergeHostsGUI.ps1)))", (get-arguments-from-interface), "`""))
+    $ArgumentList = (-join ("-executionpolicy remotesigned -Command `"& ([scriptblock]::Create((irm https://raw.githubusercontent.com/AQtun81/HostsFileMerge/main/MergeHosts.ps1)))", (get-arguments-from-interface), "`""))
   } else {                    # USING CLI
     $SourcesArg = " -Sources " + ($Sources -join ",")
     $AliasesArg = " -Aliases " + $Aliases
     $IPFormatArg = " -IPFormat " + $IPFormat
     $InstallArg = " -Install `$True"
-    $ArgumentList = (-join ("-executionpolicy remotesigned -Command `"& ([scriptblock]::Create((irm http://localhost/MergeHostsGUI.ps1)))", $SourcesArg, $AliasesArg, $IPFormatArg, $InstallArg, "`""))
+    $ArgumentList = (-join ("-executionpolicy remotesigned -Command `"& ([scriptblock]::Create((irm https://raw.githubusercontent.com/AQtun81/HostsFileMerge/main/MergeHosts.ps1)))", $SourcesArg, $AliasesArg, $IPFormatArg, $InstallArg, "`""))
   }
   start-process -verb runas -ArgumentList $ArgumentList powershell
   Exit
